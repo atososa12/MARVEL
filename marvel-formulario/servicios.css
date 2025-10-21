@@ -1,37 +1,169 @@
-.personajes {
-    text-align: center;
-    padding: 40px;
-    background: #111;
+/* ================== BODY ================== */
+body {
+    background: radial-gradient(circle, #ff0000, #000);
     color: white;
+    margin: 0;
+    text-align: center;
+}
+
+/* ================== ANIMACIONES ================== */
+@keyframes subirSuave {
+  from {opacity: 0; transform: translateY(40px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+.card {animation: subirSuave 0.9s;}
+
+/* ================== HEADER / NAV ================== */
+header nav, header .dropdown-content {
+  background: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header nav a, header .dropbtn, header .dropdown-content a {
+  color: yellow;
+  background: red;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header nav a:hover, header .dropbtn:hover, header .dropdown-content a:hover {
+  background: yellow;
+  color: red;
+  transform: rotate(-5deg) scale(1.2);
+}
+
+header .dropdown-content {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 10px;
+  z-index: 1;
+}
+
+header .dropdown:hover .dropdown-content {display: flex;}
+
+/* ================== ARREGLO BOTÓN SERVICIOS ================== */
+header .dropdown {
+    display: inline-block;       /* no estira verticalmente */
+    vertical-align: middle;      /* alinea con los demás enlaces */
+}
+
+header .dropdown a {
+    display: inline-block;       /* igual altura que los demás enlaces */
+    line-height: normal;         /* evita altura extra */
+    margin: 0;                   /* elimina margen que genera diferencia */
+}
+
+/* ================== FOOTER ================== */
+footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+footer .footer-nav a {
+  color: #dd9e9e;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+footer .footer-nav a:hover {
+  color: #b30505;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+footer p {
+  color:rgb(141, 112, 112);
+  text-align: center;
+}
+.social-icons a {
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f00;
+  transform: scale(1.2);
+}
+
+/* ================== LOGOS ================== */
+.marvel {
+  color: #e62429;  
+  font-weight: 900;
+}
+
+.logo-marvel {
+  max-height: 150px;
+}
+.avengers-logo {
+  max-height: 150px;
+}
+
+/* ================== HEROES / INDEX ================== */
+.heroes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+  min-height: 100vh;        
+  padding: 0 20px;  
+  background: radial-gradient(circle, #ff0000, #000); 
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+
+  header nav a, header .dropbtn {
+    font-size: 16px;
+    padding: 8px;
   }
-  
-  .card {
-    background: #e20505;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+
+  footer .footer-nav {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+
+  .logo-marvel,
+  .avengers-logo {
+    max-height: 100px;
   }
-  
-  .card h3 {
-    margin: 10px;
+
+  .heroes {
+    padding: 20px;
+    min-height: auto;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255,0,0,0.6);
+}
+
+@media (max-width: 480px) {
+  header nav a, header .dropbtn {
+    font-size: 14px;
+    padding: 6px;
   }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
