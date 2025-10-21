@@ -1,0 +1,154 @@
+body {
+    background: radial-gradient(circle, #ff0000, #000);
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes subirSuave {
+  from {opacity: 0; transform: translateY(40px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+.card {animation: subirSuave 0.9s;}
+
+header nav, header .dropdown-content {
+  background: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header nav a, header .dropbtn, header .dropdown-content a {
+  color: yellow;
+  background: red;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header nav a:hover, header .dropbtn:hover, header .dropdown-content a:hover {
+  background: yellow;
+  color: red;
+  transform: rotate(-5deg) scale(1.2);
+}
+
+header .dropdown-content {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 10px;
+  z-index: 1;
+}
+
+header .dropdown:hover .dropdown-content {display: flex;}
+
+footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+footer .footer-nav a {
+  color: #dd9e9e;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+footer .footer-nav a:hover {
+  color: #b30505;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+footer p {
+  color:rgb(141, 112, 112);
+  text-align: center;
+}
+.social-icons a {
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f00;
+  transform: scale(1.2);
+}
+
+
+/* sobre nosotras, estilo de los logos */
+.marvel {
+  color: #e62429;  
+  font-weight: 900;
+}
+
+.logo-marvel {
+  max-height: 150px;
+}
+.avengers-logo {
+  max-height: 150px;
+}
+
+/* estilo de la parte index amiga */
+.heroes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+  min-height: 100vh;        
+  padding: 0 20px;  
+  background: radial-gradient(circle, #ff0000, #000); 
+}
+
+/* PARTE RESPONSIVE  */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav a, header .dropbtn {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  footer .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-marvel,
+  .avengers-logo {
+    max-height: 100px;
+  }
+
+  .heroes {
+    padding: 20px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav a, header .dropbtn {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
