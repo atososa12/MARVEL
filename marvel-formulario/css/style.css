@@ -53,14 +53,14 @@ header .dropdown:hover .dropdown-content {display: flex;}
 
 /* ================== ARREGLO BOTÓN SERVICIOS ================== */
 header .dropdown {
-    display: inline-block;       /* no estira verticalmente */
-    vertical-align: middle;      /* alinea con los demás enlaces */
+    display: inline-block;       
+    vertical-align: middle;      
 }
 
 header .dropdown a {
-    display: inline-block;       /* igual altura que los demás enlaces */
-    line-height: normal;         /* evita altura extra */
-    margin: 0;                   /* elimina margen que genera diferencia */
+    display: inline-block;       
+    line-height: normal;        
+    margin: 0;                   
 }
 
 /* ================== FOOTER ================== */
@@ -124,6 +124,16 @@ footer p {
   padding: 0 20px;  
   background: radial-gradient(circle, #ff0000, #000); 
 }
+/* Video dentro de la sección */
+.video-heroes {
+  width: 100%;          
+  max-width: 640px;     
+  height: auto;          
+  display: block;        
+  margin: 20px auto;     
+  border-radius: 10px;   
+}
+
 
 /* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
