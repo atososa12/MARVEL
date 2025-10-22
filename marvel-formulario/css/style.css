@@ -1,3 +1,4 @@
+/* ================== BODY ================== */
 body {
     background: radial-gradient(circle, #ff0000, #000);
     color: white;
@@ -5,12 +6,14 @@ body {
     text-align: center;
 }
 
+/* ================== ANIMACIONES ================== */
 @keyframes subirSuave {
   from {opacity: 0; transform: translateY(40px);}
   to   {opacity: 1; transform: translateY(0);}
 }
 .card {animation: subirSuave 0.9s;}
 
+/* ================== HEADER / NAV ================== */
 header nav, header .dropdown-content {
   background: black;
   display: flex;
@@ -48,6 +51,19 @@ header .dropdown-content {
 
 header .dropdown:hover .dropdown-content {display: flex;}
 
+/* ================== ARREGLO BOTÓN SERVICIOS ================== */
+header .dropdown {
+    display: inline-block;       /* no estira verticalmente */
+    vertical-align: middle;      /* alinea con los demás enlaces */
+}
+
+header .dropdown a {
+    display: inline-block;       /* igual altura que los demás enlaces */
+    line-height: normal;         /* evita altura extra */
+    margin: 0;                   /* elimina margen que genera diferencia */
+}
+
+/* ================== FOOTER ================== */
 footer .footer-nav {
   display: flex;
   justify-content: center;
@@ -84,8 +100,7 @@ footer p {
   transform: scale(1.2);
 }
 
-
-/* sobre nosotras, estilo de los logos */
+/* ================== LOGOS ================== */
 .marvel {
   color: #e62429;  
   font-weight: 900;
@@ -98,7 +113,7 @@ footer p {
   max-height: 150px;
 }
 
-/* estilo de la parte index amiga */
+/* ================== HEROES / INDEX ================== */
 .heroes {
   display: flex;
   flex-direction: column;
@@ -110,7 +125,7 @@ footer p {
   background: radial-gradient(circle, #ff0000, #000); 
 }
 
-/* PARTE RESPONSIVE  */
+/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
