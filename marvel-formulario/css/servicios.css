@@ -144,6 +144,16 @@ body {
 .left .content { margin-left: 0; }
 .right .content { margin-left: 20px; }
 
+.timeline-container .content img {
+  width: 200px;      
+  height: 150px;     
+  object-fit: contain; 
+}
+
+
+
+
+
 /* ---------- RESPONSIVE ---------- */
 @media screen and (max-width: 768px) {
   .timeline::after { left: 31px; }
