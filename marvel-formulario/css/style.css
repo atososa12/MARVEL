@@ -127,7 +127,7 @@ footer p {
 /* Video dentro de la sección */
 .video-heroes {
   width: 100%;          
-  max-width: 640px;     
+  max-width: 1000px;     
   height: auto;          
   display: block;        
   margin: 20px auto;     
