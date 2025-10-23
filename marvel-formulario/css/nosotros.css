@@ -1,0 +1,129 @@
+/* ---------- SECCIÓN CINTA DE PELÍCULA ---------- */
+#film-section {
+  padding: 60px 0;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: white;
+  text-align: center;
+}
+
+#film-section h1 {
+  font-size: 3em;
+  margin-bottom: 60px;
+  color: #fff;
+  text-shadow: 0 0 10px #e20505, 0 0 20px #ff0000, 0 0 30px #ff4d4d;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---------- CINTA DE PELÍCULA ---------- */
+.film-strip {
+  display: flex;
+  justify-content: flex-start; /* para que la primera foto se vea completa */
+  align-items: center;
+  gap: 30px;
+  padding: 40px; /* espacio general */
+  background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+  border-top: 5px solid #e20505;
+  border-bottom: 5px solid #e20505;
+  position: relative;
+  overflow-x: auto;
+  box-shadow: 0 0 30px rgba(226, 5, 5, 0.5);
+  scroll-snap-type: x mandatory;
+}
+
+/* Margen extra para primera y última foto */
+.frame:first-child {
+  margin-left: 20px;
+}
+
+.frame:last-child {
+  margin-right: 20px;
+}
+
+/* ---------- AGUJEROS DE PELÍCULA ---------- */
+.film-strip::before,
+.film-strip::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  left: 0;
+  background: radial-gradient(circle at 12px 12px, #000 35%, transparent 36%) repeat-x;
+  background-size: 40px 25px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.film-strip::before { top: 0; }
+.film-strip::after { bottom: 0; }
+
+/* ---------- FOTOGRAMAS ---------- */
+.frame {
+  position: relative;
+  z-index: 1; /* para que quede encima de los agujeros */
+  background: #000; /* fondo negro para rellenar */
+  border: 3px solid #e20505;
+  border-radius: 10px;
+  width: 260px;
+  height: 180px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255,0,0,0.5);
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 60px #ff0000, 0 0 100px #ff4d4d;
+}
+
+/* ---------- IMÁGENES ---------- */
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene proporción y no corta */
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.frame:hover img {
+  transform: scale(1.2); /* zoom suave */
+}
+
+/* ---------- EFECTO DE BRILLO MARVEL ---------- */
+.frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.frame:hover::after {
+  left: 120%;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+  #film-section h1 { font-size: 2em; margin-bottom: 40px; }
+  .film-strip { gap: 20px; padding: 20px 40px; }
+  .frame { width: 200px; height: 140px; }
+}
+
+@media screen and (max-width: 480px) {
+  .frame { width: 160px; height: 110px; }
+}
