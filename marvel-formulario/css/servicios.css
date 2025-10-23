@@ -150,6 +150,9 @@ body {
   object-fit: contain; 
 }
 
+.timeline-container .content p {
+color:rgb(245, 245, 45)
+}
 
 
 
