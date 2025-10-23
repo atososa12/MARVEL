@@ -58,7 +58,7 @@
                 <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..." rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-danger w-100 fw-bold">Enviar</button>
+            <button type="submit"   name="send"  class="btn btn-danger w-100 fw-bold">Enviar</button>
         </form>
 
         <div class="text-center mt-4 text-secondary">

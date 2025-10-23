@@ -1,7 +1,7 @@
 <?php
-$host = "127.0.0.1"; // o localhost
+$host = "127.0.0.1"; //  localhost
 $user = "root";       // usuario por defecto de Laragon
-$pass = "";           // contraseña por defecto (vacía)
+$pass = "";           // contraseña por defecto 
 $db   = "formulario"; // nombre de la base de datos
 
 // Crear conexión
