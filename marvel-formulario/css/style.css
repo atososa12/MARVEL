@@ -1,4 +1,3 @@
-/* ================== BODY ================== */
 body {
     background: radial-gradient(circle, #ff0000, #000);
     color: white;
@@ -6,14 +5,13 @@ body {
     text-align: center;
 }
 
-/* ================== ANIMACIONES ================== */
 @keyframes subirSuave {
   from {opacity: 0; transform: translateY(40px);}
   to   {opacity: 1; transform: translateY(0);}
 }
 .card {animation: subirSuave 0.9s;}
 
-/* ================== HEADER / NAV ================== */
+/*Nav*/
 header nav, header .dropdown-content {
   background: black;
   display: flex;
@@ -51,7 +49,6 @@ header .dropdown-content {
 
 header .dropdown:hover .dropdown-content {display: flex;}
 
-/* ================== ARREGLO BOTÓN SERVICIOS ================== */
 header .dropdown {
     display: inline-block;       
     vertical-align: middle;      
@@ -63,7 +60,7 @@ header .dropdown a {
     margin: 0;                   
 }
 
-/* ================== FOOTER ================== */
+/*Footer*/
 footer .footer-nav {
   display: flex;
   justify-content: center;
@@ -100,7 +97,7 @@ footer p {
   transform: scale(1.2);
 }
 
-/* ================== LOGOS ================== */
+/* Logo*/
 .marvel {
   color: #e62429;  
   font-weight: 900;
@@ -113,7 +110,6 @@ footer p {
   max-height: 150px;
 }
 
-/* ================== HEROES / INDEX ================== */
 .heroes {
   display: flex;
   flex-direction: column;
@@ -124,7 +120,6 @@ footer p {
   padding: 0 20px;  
   background: radial-gradient(circle, #ff0000, #000); 
 }
-/* Video dentro de la sección */
 .video-heroes {
   width: 100%;          
   max-width: 1000px;     
@@ -135,7 +130,7 @@ footer p {
 }
 
 
-/* ================== RESPONSIVE ================== */
+/* Responsive */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
