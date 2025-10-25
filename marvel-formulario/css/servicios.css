@@ -4,7 +4,7 @@ body {
   background: radial-gradient(circle at center, #111 0%, #000 100%);
   color: white;
 }
-.conteiner {
+.conteiner-carrusel {
   background-color: #660000;
 }
 .conteiner h4 {
@@ -23,7 +23,6 @@ body {
 .personajes {
   text-align: center;
   padding: 40px;
-  background: #111;
   color: white;
 }
 
