@@ -112,8 +112,8 @@
 }
 
 #lightbox img {
-  max-width: 90%;
-  max-height: 85%;
+  max-width: 95%;
+  max-height: 95%;
   border: 5px solid #e20505;
   border-radius: 10px;
   box-shadow: 0 0 30px #ff0000, 0 0 60px #ff4d4d;
