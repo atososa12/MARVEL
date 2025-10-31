@@ -1,14 +1,15 @@
 <?php
-$host = "127.0.0.1"; //  localhost
-$user = "root";       // usuario por defecto de Laragon
-$pass = "";           // contraseña por defecto 
-$db   = "formulario"; // nombre de la base de datos
+// Datos de conexión
+$servername = "localhost";
+$username   = "root";       
+$password   = "";           
+$dbname     = "formulario_marvel";
 
 // Crear conexión
-$conex = mysqli_connect($host, $user, $pass, $db);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Revisar conexión
-if (!$conex) {
+if (!$conn) {
     die("Conexión fallida: " . mysqli_connect_error());
 }
 ?>
